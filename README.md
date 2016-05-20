@@ -16,4 +16,4 @@
 
 ####UIAlterController使用
 效果图:
-![image](https://github.com/szy7381517/Study-for-everyone/blob/master/ImageResource/NavigationBarGIF002.gif)
+![image](https://github.com/szy7381517/Study-for-everyone/blob/master/ImageResource/AlterViewGIF003.gif)
