@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day003_AVFoundation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I4F-nC-REG" userLabel="photo">
+                                <rect key="frame" x="20" y="6" width="560" height="586"/>
+                                <color key="backgroundColor" red="1" green="0.82204039129999995" blue="0.75394776529999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwM-oX-bJ8">
+                                <rect key="frame" x="503" y="527" width="71" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.42128530110000001" blue="0.24312457260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="GUN-TT-Gb6"/>
+                                    <constraint firstAttribute="width" constant="71" id="lqd-Ea-05u"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="takeCemera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gD-4g-IAr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gO-ux-rxw">
+                                <rect key="frame" x="25" y="527" width="71" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.42128530110000001" blue="0.24312457260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="MON-1h-c6E"/>
+                                    <constraint firstAttribute="height" constant="58" id="pLh-IN-wBm"/>
+                                </constraints>
+                                <state key="normal" title="反转"/>
+                                <connections>
+                                    <action selector="changeCemare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQH-WW-fvM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uwM-oX-bJ8" secondAttribute="trailing" constant="6" id="0cF-ui-iNu"/>
+                            <constraint firstItem="2gO-ux-rxw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="39M-IY-pzD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I4F-nC-REG" secondAttribute="bottom" constant="8" id="Bux-QJ-COS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="I4F-nC-REG" secondAttribute="leading" id="Nm1-b5-AbK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2gO-ux-rxw" secondAttribute="bottom" constant="15" id="RvP-5h-1pM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I4F-nC-REG" secondAttribute="trailing" id="Y3G-3p-zRe"/>
+                            <constraint firstItem="I4F-nC-REG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-14" id="aty-1t-Lgw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uwM-oX-bJ8" secondAttribute="bottom" constant="15" id="hts-am-6EH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pictrueView" destination="I4F-nC-REG" id="p4b-dD-ZSo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="355"/>
+        </scene>
+    </scenes>
+</document>
