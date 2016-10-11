@@ -197,6 +197,7 @@
 					1027F7A31CEC09B800D6002A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Y8Q7E6X5L2;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -208,10 +209,12 @@
 					};
 					1027F7B71CEC09B800D6002A = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1027F7A31CEC09B800D6002A;
 					};
 					1027F7C21CEC09B800D6002A = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1027F7A31CEC09B800D6002A;
 					};
 				};
@@ -419,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -432,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -444,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterViewTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day003-SWAlterView.app/Day003-SWAlterView";
 			};
 			name = Debug;
@@ -456,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterViewTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day003-SWAlterView.app/Day003-SWAlterView";
 			};
 			name = Release;
@@ -467,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterViewUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Day003-SWAlterView";
 			};
 			name = Debug;
@@ -478,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SunSummer.Day003-SWAlterViewUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Day003-SWAlterView";
 			};
 			name = Release;
@@ -501,6 +510,7 @@
 				1027F7CE1CEC09B800D6002A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1027F7CF1CEC09B800D6002A /* Build configuration list for PBXNativeTarget "Day003-SWAlterViewTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +519,7 @@
 				1027F7D11CEC09B800D6002A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1027F7D21CEC09B800D6002A /* Build configuration list for PBXNativeTarget "Day003-SWAlterViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +528,7 @@
 				1027F7D41CEC09B800D6002A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

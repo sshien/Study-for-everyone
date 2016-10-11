@@ -23,8 +23,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         setAlterViewController()
     }
 
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,46 +34,46 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     //MARK - setUIAlerController
     func setAlterViewController() -> Void {
        
-        alterViewController = UIAlertController(title: "提示", message: "alterController",preferredStyle: .Alert)
+        alterViewController = UIAlertController(title: "提示", message: "alterController",preferredStyle: .alert)
         //添加按键
-        let actionCancel = UIAlertAction(title: "取消",style: .Cancel,handler: nil)
+        let actionCancel = UIAlertAction(title: "取消",style: .cancel,handler: nil)
 
-        let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Default) {
+        let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.default) {
             (action: UIAlertAction!) -> Void in
            print("Ok")
         }
         alterViewController.addAction(actionCancel)
         alterViewController.addAction(okAction)
         //添加文本框
-        alterViewController.addTextFieldWithConfigurationHandler { (textFile) in
+        alterViewController.addTextField { (textFile) in
             textFile.placeholder = "姓名"
         }
-        alterViewController.addTextFieldWithConfigurationHandler { (textFile) in
+        alterViewController.addTextField { (textFile) in
             textFile.placeholder = "密码"
         }
 
-        self.presentViewController(alterViewController, animated: true , completion: nil)
+        self.present(alterViewController, animated: true , completion: nil)
     }
     //MARK - setUIAlerController
     func setActionSheetViewController() -> Void {
         
-        alterViewController = UIAlertController(title: "提示", message: "alterController",preferredStyle: .ActionSheet)
+        alterViewController = UIAlertController(title: "提示", message: "alterController",preferredStyle: .actionSheet)
         //添加按键
-        let actionCancel = UIAlertAction(title: "再见",style: .Cancel,handler: nil)
+        let actionCancel = UIAlertAction(title: "再见",style: .cancel,handler: nil)
         
-        let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Default) {
+        let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.default) {
             (action: UIAlertAction!) -> Void in
             print("Ok")
         }
-        let okAction1 = UIAlertAction(title: "1", style: UIAlertActionStyle.Default) {
+        let okAction1 = UIAlertAction(title: "1", style: UIAlertActionStyle.default) {
             (action: UIAlertAction!) -> Void in
             print("Ok")
         }
-        let okAction2 = UIAlertAction(title: "2", style: UIAlertActionStyle.Default) {
+        let okAction2 = UIAlertAction(title: "2", style: UIAlertActionStyle.default) {
             (action: UIAlertAction!) -> Void in
             print("Ok")
         }
-        let okAction3 = UIAlertAction(title: "3", style: UIAlertActionStyle.Default) {
+        let okAction3 = UIAlertAction(title: "3", style: UIAlertActionStyle.default) {
             (action: UIAlertAction!) -> Void in
             print("Ok")
         }
@@ -82,12 +82,12 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         alterViewController.addAction(okAction1)
         alterViewController.addAction(okAction2)
         alterViewController.addAction(okAction3)
-        self.presentViewController(alterViewController, animated: true , completion: nil)
+        self.present(alterViewController, animated: true , completion: nil)
     }
     
     
     
-    @IBAction func alterAction(sender: UIButton) {
+    @IBAction func alterAction(_ sender: UIButton) {
         setAlterViewController()
         
         #if DEBUG
@@ -98,19 +98,19 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         
     }
     
-    @IBAction func alterClick(sender: UIButton) {
+    @IBAction func alterClick(_ sender: UIButton) {
         setActionSheetViewController()
     }
     
-    @IBAction func poAction(sender: UIButton) {
+    @IBAction func poAction(_ sender: UIButton) {
         let pop = PopViewController()
-        pop.modalPresentationStyle = .Popover
+        pop.modalPresentationStyle = .popover
         pop.popoverPresentationController?.delegate = self
         pop.popoverPresentationController?.sourceView = sender
         pop.popoverPresentationController?.sourceRect = sender.bounds
-        pop.preferredContentSize = CGSizeMake(100, 100)
-        pop.popoverPresentationController?.permittedArrowDirections = .Up
-        self.presentViewController(pop, animated: true, completion: nil)
+        pop.preferredContentSize = CGSize(width: 100, height: 100)
+        pop.popoverPresentationController?.permittedArrowDirections = .up
+        self.present(pop, animated: true, completion: nil)
     }
     
 }

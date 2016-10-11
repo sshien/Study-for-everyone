@@ -20,12 +20,12 @@ class TableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //恢复默认状态
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGrayColor()
-        self.navigationController?.navigationBar.tintColor    = UIColor.blueColor()
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
+        self.navigationController?.navigationBar.tintColor    = UIColor.blue
         self.navigationController?.navigationBar.backIndicatorImage = nil
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = nil
         self.navigationController?.navigationBar.titleTextAttributes = nil
@@ -34,39 +34,39 @@ class TableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 8
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier"+"\(indexPath.row+1)", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier"+"\((indexPath as NSIndexPath).row+1)", for: indexPath)
         return cell
     }
  
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         swStyleNavigationBar(indexPath)
     }
     
     //MARK:- 选择不同的风格
-    func swStyleNavigationBar(index:NSIndexPath) -> Void {
+    func swStyleNavigationBar(_ index:IndexPath) -> Void {
         
         let  swVC = SWViewController()
         
-        switch index.row {
+        switch (index as NSIndexPath).row {
             
-        case 0: swVC.style = .Default
-        case 1: swVC.style = .BackgroundImage
-        case 2: swVC.style = .BackgroundColor
-        case 3: swVC.style = .TitleView
-        case 4: swVC.style = .TextAttribute
-        case 5: swVC.style = .BackButtonTintColor
-        case 6: swVC.style = .ButtonImage
+        case 0: swVC.style = .default
+        case 1: swVC.style = .backgroundImage
+        case 2: swVC.style = .backgroundColor
+        case 3: swVC.style = .titleView
+        case 4: swVC.style = .textAttribute
+        case 5: swVC.style = .backButtonTintColor
+        case 6: swVC.style = .buttonImage
         case 7: swVC.style = .addMoreItems
         default:
             fatalError("矮油！好像没有选项～")

@@ -22,24 +22,24 @@ import UIKit
 
 
 enum SWNavtionStyle {
-    case Default
-    case BackgroundColor
-    case BackgroundImage
+    case `default`
+    case backgroundColor
+    case backgroundImage
     case addMoreItems
-    case BackButtonTintColor
-    case ButtonImage
-    case TextAttribute
-    case TitleView
+    case backButtonTintColor
+    case buttonImage
+    case textAttribute
+    case titleView
 }
 
 class SWViewController: UIViewController {
     
 
-    var style:SWNavtionStyle! = .Default
+    var style:SWNavtionStyle! = .default
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor  = UIColor.whiteColor()
+        self.view.backgroundColor  = UIColor.white
         self.title = "定制导航栏标题"
         setStyle(self.style)
         // Do any additional setup after loading the view.
@@ -47,31 +47,31 @@ class SWViewController: UIViewController {
 
     
     //MARK:- 设置导航栏样式
-    func setStyle(aStyle:SWNavtionStyle) -> Void {
+    func setStyle(_ aStyle:SWNavtionStyle) -> Void {
         
         switch aStyle {
-        case .Default:
+        case .default:
             defaultStyle()
             
         case .addMoreItems:
             addMoreBatItem()
             
-        case .ButtonImage:
+        case .buttonImage:
             setButtonImage()
             
-        case .BackgroundColor:
+        case .backgroundColor:
             backgroundColor()
             
-        case .BackButtonTintColor:
+        case .backButtonTintColor:
             backButtonTintColor()
             
-        case .TextAttribute:
+        case .textAttribute:
             setNavigationTextAttribute()
             
-        case .BackgroundImage:
+        case .backgroundImage:
             backgroundImageStyle()
             
-        case .TitleView:
+        case .titleView:
             setTitltView()
         }
         
@@ -84,24 +84,24 @@ class SWViewController: UIViewController {
     //MARK:- BackgroundImage
     func backgroundImageStyle() -> Void {
         self.title = "设置导航栏图片"
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav_bg_ios7.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav_bg_ios7.png"), for: .default)
     }
     
     //MARK:- backgroundColor
     func backgroundColor() -> Void {
         self.title  = "设置背景颜色"
         //如果你设置过图片，那么就要写这部，反之亦然
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         //#iOS7中设置bar背景颜色改为 barTintColor
-        self.navigationController?.navigationBar.barTintColor = UIColor.yellowColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.yellow
     }
     
     //MARK:- backButtonColor 设置返回键颜色
     func backButtonTintColor() -> Void {
         self.title  = "设置返回键颜色"
-        self.navigationController?.navigationBar.tintColor = UIColor.greenColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.green
         //或者这种
-        UINavigationBar.appearance().tintColor  =  UIColor.greenColor()
+        UINavigationBar.appearance().tintColor  =  UIColor.green
 
     }
     
@@ -122,11 +122,11 @@ class SWViewController: UIViewController {
     func setNavigationTextAttribute() -> Void {
         
         let shadow = NSShadow()
-        shadow.shadowColor  = UIColor.darkGrayColor()
-        shadow.shadowOffset = CGSizeMake(0, 1)
+        shadow.shadowColor  = UIColor.darkGray
+        shadow.shadowOffset = CGSize(width: 0, height: 1)
         
         //MARK:=
-        let attributes:[String:AnyObject] = [NSForegroundColorAttributeName:UIColor.redColor(),
+        let attributes:[String:AnyObject] = [NSForegroundColorAttributeName:UIColor.red,
                                              NSFontAttributeName: UIFont(name: "AmericanTypewriter-Bold", size: 22)!,
                                              NSShadowAttributeName:shadow]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
@@ -136,8 +136,8 @@ class SWViewController: UIViewController {
     //MARK:- 添加多个按键
     func addMoreBatItem() -> Void {
         self.title  = "添加多个按键"
-        let shareItem = UIBarButtonItem.init(barButtonSystemItem: .Action, target: self, action: nil)
-        let camerItem = UIBarButtonItem.init(barButtonSystemItem: .Camera, target: self, action: nil)
+        let shareItem = UIBarButtonItem.init(barButtonSystemItem: .action, target: self, action: nil)
+        let camerItem = UIBarButtonItem.init(barButtonSystemItem: .camera, target: self, action: nil)
         let itmes = [shareItem,camerItem]
         self.navigationItem.rightBarButtonItems = itmes
     }
