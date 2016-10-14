@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day007_CarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6X-xH-ciA">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="roe-Xo-tdA">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q9I-zk-G7J">
+                                            <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="346" id="7nD-13-zGm"/>
+                                                <constraint firstAttribute="width" constant="359" id="Ndx-TA-MFs"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7il-3J-EXA">
+                                                <size key="itemSize" width="296" height="343"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="carCell" id="Jjq-ha-Evn" customClass="HomeCarCell" customModule="Day007_CarDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="2" width="296" height="343"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="343"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S51-25-dbp">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="288" id="gkA-3X-at7"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-dc-1b4">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="oZe-HG-kyy"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="TBv-dc-1b4" firstAttribute="top" secondItem="S51-25-dbp" secondAttribute="bottom" constant="9" id="1Rl-59-QZW"/>
+                                                        <constraint firstItem="TBv-dc-1b4" firstAttribute="trailing" secondItem="S51-25-dbp" secondAttribute="trailing" id="9pv-4D-yiX"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="S51-25-dbp" secondAttribute="trailing" constant="28" id="cIR-pF-fFn"/>
+                                                        <constraint firstItem="S51-25-dbp" firstAttribute="leading" secondItem="TBv-dc-1b4" secondAttribute="leading" id="iQ0-xz-zkF"/>
+                                                        <constraint firstItem="S51-25-dbp" firstAttribute="top" secondItem="Jjq-ha-Evn" secondAttribute="topMargin" id="jFV-xe-ImA"/>
+                                                        <constraint firstItem="S51-25-dbp" firstAttribute="leading" secondItem="Jjq-ha-Evn" secondAttribute="leadingMargin" constant="12" id="scT-vW-Frz"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="carImageView" destination="S51-25-dbp" id="PS2-j7-RcO"/>
+                                                        <outlet property="carNameLabel" destination="TBv-dc-1b4" id="fMo-Bb-DT0"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="vg2-B9-kTr"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="Uh1-30-Aaf"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="q9I-zk-G7J" firstAttribute="centerX" secondItem="roe-Xo-tdA" secondAttribute="centerX" id="Jrw-5B-lXJ"/>
+                                        <constraint firstItem="q9I-zk-G7J" firstAttribute="centerY" secondItem="roe-Xo-tdA" secondAttribute="centerY" id="Pyw-fo-iZL"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="R6X-xH-ciA" secondAttribute="trailing" constant="-16" id="D9L-hh-PWB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R6X-xH-ciA" secondAttribute="bottom" id="OjF-5r-2Hv"/>
+                            <constraint firstItem="R6X-xH-ciA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="WpX-Um-wIB"/>
+                            <constraint firstItem="R6X-xH-ciA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Xlt-0z-o5I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
