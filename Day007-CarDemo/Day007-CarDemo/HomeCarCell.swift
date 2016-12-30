@@ -25,7 +25,7 @@ class HomeCarCell: UICollectionViewCell {
     }
     
     fileprivate func updateUI(){
-        
+
         self.carNameLabel.text = carModel.title
         self.carImageView.image = UIImage.init(named: carModel.image)
     }
